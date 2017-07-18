@@ -39,3 +39,29 @@ Animate method receives two parameters:
   })
 ```
 
+## Before and After Actions 
+
+Before and after properties can be objects with a class and a callback function.
+The callback functions receive as parameter the element that is animated.
+
+```
+  let obj = {
+    before: {
+      beforeClass: 'aClass'.
+      doBefore: () => {
+        console.log('before')
+      }
+    },
+    animation: 'animation 2s linear,
+    after: {
+      afterClass: 'aClass',
+      doAfter: (element) => {
+        // after a fade out animation for example
+        element.style.display = 'none';
+      }
+    }
+  }
+
+  Animate(element, obj)
+```
+
